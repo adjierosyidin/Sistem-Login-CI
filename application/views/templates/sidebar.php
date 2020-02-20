@@ -5,9 +5,9 @@
                 <div class="nav">
                     <div class="sb-sidenav-menu-heading">Menu</div>
                     <a class="nav-link" href="<?php if ($user['role_id'] == 1) {
-                                                    base_url('admin');
+                                                    echo base_url('admin');
                                                 } else {
-                                                    base_url('user');
+                                                    echo base_url('user');
                                                 } ?>">
                         <div class="sb-nav-link-icon">
                             <i class="fas fa-tachometer-alt"></i>
