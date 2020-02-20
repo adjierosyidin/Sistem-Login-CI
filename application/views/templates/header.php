@@ -19,7 +19,7 @@
                                             echo base_url('admin');
                                         } else {
                                             echo base_url('user');
-                                        } ?>">Start Bootstrap</a>
+                                        } ?>">Rosh Website</a>
         <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#">
             <i class="fas fa-bars"></i>
         </button>

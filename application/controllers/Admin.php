@@ -14,14 +14,25 @@ class Admin extends CI_Controller
         $this->load->view('templates/footer');
     }
 
-    public function profile()
+    public function menu()
     {
-        $data['title'] = 'Admin Profile';
+        $data['title'] = 'Menu Management';
         $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 
         $this->load->view('templates/header', $data);
         $this->load->view('templates/sidebar', $data);
-        $this->load->view('user/profile', $data);
+        $this->load->view('admin/menumanagement', $data);
+        $this->load->view('templates/footer');
+    }
+
+    public function usermanagement()
+    {
+        $data['title'] = 'User Management';
+        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+
+        $this->load->view('templates/header', $data);
+        $this->load->view('templates/sidebar', $data);
+        $this->load->view('admin/usermanagement', $data);
         $this->load->view('templates/footer');
     }
 }
